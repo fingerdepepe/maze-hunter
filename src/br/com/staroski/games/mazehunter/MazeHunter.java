@@ -28,12 +28,20 @@ public class MazeHunter {
 	private void execute() {
 		JFrame frame = new JFrame("Maze Hunter");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(640, 480);
+
+		int frameWidth = 640;
+		int frameHeight = 480;
+		int mazeWidth = 480;
+		int mazeHeight = 320;
+		int linhas = 30;
+		int colunas = 40;
+
+		frame.setSize(frameWidth, frameHeight);
 		frame.setResizable(false);
 
-		int x = (640 - 480) / 2;
-		int y = (480 - 320) / 2;
-		maze = new Maze(30, 30, x, y, 480, 320);
+		int x = (frameWidth - mazeWidth) / 2;
+		int y = (frameHeight - mazeHeight) / 2;
+		maze = new Maze(linhas, colunas, x, y, mazeWidth, mazeHeight);
 		Painter painter = new Painter();
 		frame.setContentPane(painter);
 		frame.setLocationRelativeTo(null);

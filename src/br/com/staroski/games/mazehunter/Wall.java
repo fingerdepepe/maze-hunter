@@ -15,7 +15,7 @@ public class Wall implements Paintable {
 		if (broken) {
 			return;
 		}
-		g.setColor(Color.GRAY);
+		g.setColor(Color.BLACK);
 		g.fill(bounds);
 	}
 
